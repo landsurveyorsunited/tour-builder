@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    TF.tour = {{tour.toJson|safe}};
+    TF.init();
+  });
+</script>
+{% endblock extra_head %}
+
+
+{% block content %}
+    <div class="subcontent">
+      <div id="sidebar">
+        title: {{tour.title}}<br>
+        created: {{tour.created|date}}<br>
+        {% if tour.advanced %}
+          {% for l in tour.get_lookats %}
+            {{forloop.counter}}:
+            {{l.lat|floatformat:2}},{{l.lng|floatformat:2}},{{l.rng|floatformat:0}} ({{l.flyto}})<br>
+          {% endfor %}
+        {% endif %}
+
+        <div id="embed">
+          Copy and paste to embed this tour:
+            <textarea id="embed_code">&lt;iframe width="300" height="200" src="http://{{host}}{% url embed tour.key %}"/&gt;</textarea>
+        </div>
+      </div>
+
+      <div id="main">
+        <div id="map3d"></div>
+     </div>
+
+    </div>
+
+{% endblock content %}
+

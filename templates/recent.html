@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+  <script type="text/javascript">
+  $(document).ready(function() {
+    TF.init();
+  });
+  </script>
+{% endblock extra_head %}
+
+
+{% block content %}
+  <h3>Welcome to Tourifier<h3>
+    <div class="subcontent">
+    {% for tour in tours %}
+    <a href="{% url shorturl tour.key %}">{{tour.created|date}}</a><br>
+    {% endfor %}
+    </div>
+
+{% endblock content %}
+

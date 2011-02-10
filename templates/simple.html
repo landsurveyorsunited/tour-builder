@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<script type="text/javascript">
+  $(document).ready(function() {
+      TF.simpleInit();
+  });
+</script>
+{% endblock extra_head %}
+
+
+{% block content %}
+    <div id="message_box">
+      Welcome to the Google Earth Tourifier.
+      Use the Single Location option to create a simple, embeddable, 3D view of any
+      location you choose.  Or create a Multi Location Tour to tell a story.
+    </div>
+    <div class="subcontent">
+      <ol id="simple_instructions">
+        <h3>Create a single-stop tour:</h3>
+
+        <li><h4>Navigate to a nice view of the place you want to share</h4>
+          <form action="" onsubmit="TF.performSearch(); return false;"id="search-form">
+            <input type="search" id="search-box"/>
+            <input type="submit" id="search-button"/>
+          </form>
+        </li>
+
+        <li><h4>Give it a title:</h4>
+        <input type="text" id="tour_title">
+        </li>
+
+        <li><h4>Specify how to fly there:</h4>
+        Speed: <input type="range" />
+        <br><label><input type="checkbox" id="check_spin" /> Spin on arrival</label>
+        </li>
+
+        <li><h4>Select visible layers:</h4>
+        <label><input type="checkbox" id="check_roads" checked='true' /> Roads</label><br>
+        <label><input type="checkbox" id="check_borders" checked='true' /> Borders</label><br>
+        <label><input type="checkbox" id="check_buildings" /> 3D buildings</label></li>
+
+        <li><button id="simple_save" type="button">Save Tour</button></li>
+      </ol>
+
+      <div id="main">
+        <div id="map3d"></div>
+     </div>
+
+    </div>
+
+{% endblock content %}
+

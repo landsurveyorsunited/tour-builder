@@ -1,0 +1,186 @@
+#Copyright 2010 Google Inc.
+#
+#Licensed under the Apache License, Version 2.0 (the "License");
+#you may not use this file except in compliance with the License.
+#You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+#Unless required by applicable law or agreed to in writing, software
+#distributed under the License is distributed on an "AS IS" BASIS,
+#WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#See the License for the specific language governing permissions and
+#limitations under the License.
+
+body{
+ margin: 0 auto;
+ text-align:center;
+ max-width: 900px; height: 100%;
+ width:expression(document.body.clientWidth > 900? "900px" : "auto");
+ font-family: Arial, verdana, lucida, sans-serif;
+ color:#2F2F2F;
+ }
+
+#container{
+text-align:left;
+width:expression(document.body.clientWidth > 900? "900px" : "auto");
+}
+
+
+#content {
+  position: relative;
+}
+#content > #search-form {
+  position: absolute;
+  top: 0;
+  left: 500px;
+}
+
+
+#message_box{
+padding:5px;
+border-bottom:1px solid grey;
+margin-bottom:10px;
+}
+
+#sidebar {
+  float:left;
+  position: relative;
+  width: 350px;
+  font-size:.8em;
+  height: 540px;
+  overflow-y: scroll;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+}
+#sidebar > h4:first-child, #simple_instructions > h3:first-child {
+  margin-top: 0;
+}
+
+#publishing {
+  float:left;
+  width:350px;
+  padding-left: 20px;
+}
+
+#publishing > h2 {
+  font-size: 1.6em;
+  color: #555;
+  margin: 0 0 0 -10px;
+  font-weight: normal;
+}
+
+#publishing > h4, #publishing > label {
+  display: none;
+}
+
+#simple_instructions {
+  float:left;
+  width:350px;
+  font-size:.8em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#simple_instructions > li {
+  margin-top: 20px;
+}
+
+#embed_code {
+  width: 375px;
+  height: 5em;
+  margin-left: 10px;
+  font-family: monospace;
+}
+
+#search-box {
+  font-size: 1.2em;
+  margin: 10px 0 15px 100px;
+  border: 1px solid #CCC;
+  width: 300px;
+}
+#tour_title {
+  font-size: 1.2em;
+  padding: 1px;
+  width: 250px;
+  margin: 8px 0;
+}
+.placemark_title {
+  font-size: 1.5em;
+  width: 270px;
+}
+.placeholder {
+  color: #aaa;
+}
+
+#embed {
+  margin-top: 10px;
+  line-height: 2em;
+}
+
+#main{
+  margin-left:350px;
+}
+
+#map3d{
+ height:500px;
+}
+.placemark {
+  cursor: pointer;
+  border-bottom: 1px solid #E6E6E6;
+  padding: 10px;
+  line-height: 1.8em;
+}
+.placemark:hover {
+  background-color: #F5F7FC;
+}
+.placemark.selected {
+  background-color: #E2E8FA;
+}
+
+.lookat_details, .placemark_summary {
+  font-size:.8em;
+  color:#aaa;
+}
+
+#save_button, #simple_save {
+  display: none;
+}
+
+.placemark_number {
+  font-size: 2em;
+  margin: 0 10px 0 0;
+  color:#555;
+}
+
+#placemark_prompt {
+  font-size: 2em;
+  color: #555;
+  border-bottom: 1px solid #E6E6E6;
+  padding: 10px 0;
+  background-color: #FAFAFA;
+}
+#take_button {
+  display: none;
+}
+
+.side_place_item{
+  padding:2px;
+}
+
+#addPlacemark {
+  cursor: pointer;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+#addPlacemark, .placemark_fields {
+  border-top: 1px solid #E6E6E6;
+}
+h4 {
+  margin-bottom: .6em;
+}
+
+.show_options {
+  cursor: pointer;
+}

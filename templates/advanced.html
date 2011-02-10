@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<script type="text/javascript">
+  $(document).ready(function() {
+    TF.init();
+  });
+</script>
+{% endblock extra_head %}
+
+
+{% block content %}
+<div class="subcontent">
+  <div id="sidebar">
+    <div id="placemark_prompt">
+      Step <span class="placemark_num">1</span>: <span class="prompt">Search for a place or navigate to it by panning and zooming the earth.</span>
+      <button id="take_button">Take Snapshot of View</button>
+    </div>
+  </div>
+
+  <div id="main">
+    <form action="" onsubmit="TF.performSearch(); return false;"id="search-form">
+      <input type="search" id="search-box"/>
+      <input type="submit" id="search-button" value="Search">
+    </form>
+    <div id="map3d"></div>
+  </div>
+  
+  <div id="publishing">
+    <h2>Finally:</h2>
+    <input type="text" id="tour_title"><br>
+    <button id="save_button" type="button">Publish</button>
+    
+    <h4>Select visible layers:</h4>
+    <label><input type="checkbox" id="check_roads" checked='true' /> Roads</label><br>
+    <label><input type="checkbox" id="check_borders" checked='true' /> Borders</label><br>
+    <label><input type="checkbox" id="check_buildings" /> 3D buildings</label>
+  </div>
+
+</div>
+
+{% endblock content %}
+

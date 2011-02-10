@@ -1,0 +1,9 @@
+This is a basic demo of how you can create easily embeddable 'tours' for the
+Earth API.  To run this on AppEngine, you will want to ensure you have the
+following libraries included:
+ - simplejson
+ - django
+
+
+ Also be sure to create a local_settings.py which includes, at least,
+ ADMINS and GOOGLE_API_KEY

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{% block title %}Tourifier{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="/static/tourify.css" media="screen" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi?key={{GOOGLE_API_KEY}}"></script>
+<script type="text/javascript" src="/static/json2.js"></script>
+<script type="text/javascript" src="/static/tourify.js"></script>
+{% block extra_head %}{% endblock %}
+
+</head>
+<body>
+<div id="container">
+
+  {% block header %}
+  <div id="header">
+    <a href="/"><p><div id="logo"></div></p></a>
+  </div>
+  {% endblock %}
+
+  <div id="content">
+  {% block content %}
+  content goes here
+
+  {% endblock content %}
+  </div>
+</div>
+
+</body>
+</html>
